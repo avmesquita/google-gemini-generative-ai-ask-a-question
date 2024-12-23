@@ -2,6 +2,10 @@
 
 ## Angular App => Ask a Question with Historic
 
+## Screenshots
+
+<img src="/public/assets/screenshot_ipad-air-tab1.png" style="width:30%"> <img src="/public/assets/screenshot_ipad-air-tab2.png" style="width:30%">
+
 ## Install requirements
 
 Run `npm install` to install project requirements.
