@@ -1,0 +1,19 @@
+<main class="main">
+  <div class="content">
+    <div style="width: 100%;background-color: gray;height: 40px;text-align: center;">
+        <h1 style="color:whitesmoke;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Google Gemini Generative AI</h1>
+    </div>    
+    <mat-tab-group>
+      <mat-tab label="QUESTION">
+        <app-gemini></app-gemini>
+      </mat-tab>      
+      <mat-tab label="HISTORIC">
+        <app-answers></app-answers>
+      </mat-tab>
+    </mat-tab-group>    
+    <router-outlet />
+  </div>
+</main>
+
+
+
