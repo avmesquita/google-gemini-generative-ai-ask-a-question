@@ -1,0 +1,33 @@
+<div class="container" style="padding: 40px;">
+  <form class="user-form">
+
+    <div>
+        <h3>Ask a Question to Gemini 2.0</h3>
+    </div>
+    <div style="width: 100%;">
+        <mat-form-field class="example-full-width" style="width: 100%;">
+            <!--<mat-label>Ask a Question </mat-label>-->
+            <textarea 
+              matInput
+              placeholder="input your question here"
+              [(ngModel)]="question"  [ngModelOptions]="{standalone: true}"
+              style="width: 100%;"
+              ></textarea>
+          </mat-form-field>      
+    </div>
+
+    <div class="example-button-container">
+      <a mat-fab extended (click)="ask()">
+        <mat-icon>question_mark</mat-icon>
+        ASK
+      </a>
+    </div>
+
+  </form>
+
+</div>
+
+<div>
+  <div class="content" style="padding: 10px;" [innerHTML]="answer">
+  </div>
+</div>

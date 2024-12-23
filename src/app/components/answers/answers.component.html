@@ -1,0 +1,30 @@
+<div style="width: 100%;background-color: transparent;height: 60px;padding-top: 5px;">
+    <div style="float: right;">
+        <div class="example-button-container">
+            <a mat-fab extended (click)="clear()">
+              <mat-icon>clear</mat-icon>
+              CLEAR
+            </a>
+        </div>
+    </div>
+</div>    
+
+<ng-container *ngIf="(history$ | async) as historias">
+    <ng-container *ngFor="let historia of historias">    
+        <div style="padding: 40px;">
+            <mat-card [appearance]="'outlined'">
+                <mat-card-header>
+                    <h3 style="color:darkcyan">DATE: {{ historia.instant | date: 'dd/MM/YYYY HH:mm:ss' }}</h3>            
+                </mat-card-header>
+                <mat-card-content>
+                    <h3 style="color:darkcyan">QUESTION</h3>
+                    <p>{{ historia.question }}</p>
+                    <h3 style="color:darkcyan">ANSWER</h3>
+                    <p [innerHTML]="historia.answer"></p>        
+                </mat-card-content>
+            </mat-card>
+        </div>    
+        <hr>    
+    </ng-container>
+</ng-container>
+
